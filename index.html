@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Change Awareness Game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" >
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Climate Change Awareness Game!</h1>
+    <div id="game">
+      <!-- Game content will be inserted here -->
+    </div>
+	
+	<!-- Upgrade...-->
+	<!--The elements with the IDs 'restartButton' and 'exitButton' were not present in the document when the script ran. -->
+    <!-- Added restart and exit buttons -->
+    <button id="restartButton">Restart Game</button>
+    <button id="exitButton">Exit Game</button>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="promptHandler.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+   <!-- Upgrade -->
+  <!-- Included event listener script to add event listeners for the restart and exit buttons at the end  -->
+  
+  <script>
+  
+  <!--Upgrade -->
+    //Added event listeners to the restart and exit buttons
+    document.getElementById('restartButton').addEventListener('click', restartGame);
+    document.getElementById('exitButton').addEventListener('click', exitGame);
+
+    // Upgrade 
+    // Added a function to restart the game 
+    function restartGame() {
+        <!-- Reload the page to restart the game -->
+        location.reload();
+    }
+
+	//Upgrade...
+    //Added a function to exit the game
+    function exitGame() {
+        // Display a farewell message
+        alert('Thank you for playing!');
+        // Optionally, you can redirect the user to another page or perform other actions
+    }
+  </script>
+</body>
+</html>
