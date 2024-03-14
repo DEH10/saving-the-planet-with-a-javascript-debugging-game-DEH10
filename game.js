@@ -72,7 +72,11 @@ function handleAnswer(playerAnswer, correctAnswerIndex, options) {
       gameDiv.innerHTML = `<p>Incorrect! The correct choice was: ${options[correctAnswerIndex]}.</p>`;
     }
   }
-  
+
+ //Upgrade...
+ // Update the score display
+    updateScoreDisplay();
+	
   // Move to the next scenario or end the game
   currentScenarioIndex++;
   if (currentScenarioIndex < scenarios.length) {
@@ -86,6 +90,13 @@ function handleAnswer(playerAnswer, correctAnswerIndex, options) {
 	
     gameDiv.innerHTML += `<p>Game Over! Your total score is: ${score}. Thank you for playing.</p>`;
   }
+}
+
+//Upgrade...
+// Function to update the score display
+function updateScoreDisplay() {
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    scoreDisplay.textContent = `Score: ${score}`;
 }
 
 // Define game scenarios
