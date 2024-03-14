@@ -129,16 +129,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Bug fix to create a function to display incorrect answers at the end of the game
   // this helped to ensure a more seemless user experience 
   function displayIncorrectAnswers() {
-    const gameDiv = document.getElementById('game');
-    gameDiv.innerHTML += '<h2>Incorrect Answers:</h2>';
-    incorrectAnswers.forEach(answer => {
-      gameDiv.innerHTML +=
-        '<p>' + answer.question + ' - Correct choice(s): ' + answer.correctChoices + '</p>';
-    });
-    // This provides a smoother user experience without interrupting the flow of the game
-    // Display total score
-    gameDiv.innerHTML += `<p>Game Over! Your total score is: ${score}. Thank you for playing.</p>`;
-  }
+  const gameDiv = document.getElementById('game');
+  gameDiv.innerHTML = '<h2>Incorrect Answers:</h2>'; // Clear previous content and start with the header
+
+  // Iterate through incorrectAnswers array to display each incorrect answer
+  incorrectAnswers.forEach(answer => {
+    gameDiv.innerHTML += `<p>${answer.question} - Correct choice(s): ${answer.correctChoices}</p>`;
+  });
+
+  // Display total score
+  const scoreDisplay = document.getElementById('scoreDisplay');
+  scoreDisplay.textContent = `Game Over! Your total score is: ${score}. Thank you for playing.`;
+}
+
 
   //Bug fix to create a function to update the score display for a smoother user experience
   function updateScoreDisplay() {
