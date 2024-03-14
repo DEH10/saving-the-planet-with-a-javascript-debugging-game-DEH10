@@ -1,6 +1,6 @@
 body {
-  background-color: #2d545e; /* Night Blue */
-  color: #e1b382; /* Sand Tan */
+  background-color: #76c1d4; /* Light Blue Backdrop */
+  color: #f7f7f7; /* Barely Gray Edge */
   font-family: Arial, sans-serif;
 }
 
@@ -11,12 +11,12 @@ body {
 }
 
 h1 {
-  color: #c89666; /* Sand Tan Shadow */
+  color: #3d7c47; /* Green Mountain */
 }
 
 button {
-  background-color: #12343b; /* Night Blue Shadow */
-  color: #FFFFFF; /* White */
+  background-color: #09868b; /* Blue Mountain */
+  color: #ffffff; /* White */
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -25,5 +25,5 @@ button {
 }
 
 button:hover {
-  background-color: #e1b382; /* Sand Tan */
+  background-color: #3d7c47; /* Green Mountain */
 }
