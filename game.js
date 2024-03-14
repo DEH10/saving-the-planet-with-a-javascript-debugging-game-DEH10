@@ -139,7 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Display total score
   const scoreDisplay = document.getElementById('scoreDisplay');
-  scoreDisplay.textContent = `Game Over! Your total score is: ${score}. Thank you for playing.`;
+  if (score > 4) {
+    scoreDisplay.textContent = `You scored ${score}. Correct! You made environment-friendly decisions. Kudos!`;
+  } else {
+    scoreDisplay.textContent = `Game Over! Your total score is: ${score}. Thank you for playing.`;
+  }
 }
 
 
